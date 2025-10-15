@@ -15,17 +15,109 @@ def render_page1():
     face_shape = request.form.get("face_shape")
     
     
-    if eye_shape == '':
-        reply1 = ""
-    elif face_shape == "":
-        reply1 = ""
-    elif lip_volume == "":
-        reply1 = ""
-    elif eyebrow_shape == "":
-        reply1 = ""
-    elif nose_type == "":
-        reply1 = ""
+    soft_glam = {
+    	"eye_shape": ["Almond", "Upturned"],
+    	"lip_volume": ["Full", "Medium"],
+    	"eyebrow_shape": ["Arch", "High-arch"],
+    	"nose_type": ["Snub", "Button"],
+    	"face_shape": ["Heart", "Oval"],
+    }
 
+    name = {
+    	"eye_shape": ["Almond", "Upturned"],
+    	"lip_volume": ["Full", "Medium"],
+    	"eyebrow_shape": ["Arch", "High-arch"],
+    	"nose_type": ["Snub", "Button"],
+    	"face_shape": ["Heart", "Oval"],
+    }
+    
+    name = {
+    	"eye_shape": ["Almond", "Upturned"],
+    	"lip_volume": ["Full", "Medium"],
+    	"eyebrow_shape": ["Arch", "High-arch"],
+    	"nose_type": ["Snub", "Button"],
+    	"face_shape": ["Heart", "Oval"],
+    }
+    
+    name = {
+    	"eye_shape": ["Almond", "Upturned"],
+    	"lip_volume": ["Full", "Medium"],
+    	"eyebrow_shape": ["Arch", "High-arch"],
+    	"nose_type": ["Snub", "Button"],
+    	"face_shape": ["Heart", "Oval"],
+    }
+    
+    scores = {
+    	"Soft Glam": 0;
+    	"name": 0;
+    	"name": 0;
+    	"name": 0;
+    	"name": 0;
+    }    
+    
+    
+    if eye_shape in soft_glam["eye_shape"]:
+    	scores["Soft Glam"] +=1
+    if lip_volume in name["lip_volume"]:
+    	scores["name"] +=1
+    if eyebrow_shape in name["eyebrow_shape"]:
+    	scores["name"] +=1
+    if nose_type in name["nose_type"]:
+    	scores["name"] +=1
+    if face_shape in name["face_shape"]:
+    	scores["name"] +=1
+    	
+    	
+    if eye_shape in name["eye_shape"]:
+    	scores["name"] +=1
+    if lip_volume in name["lip_volume"]:
+    	scores["name"] +=1
+    if eyebrow_shape in name["eyebrow_shape"]:
+    	scores["name"] +=1
+    if nose_type in name["nose_type"]:
+    	scores["name"] +=1
+    if face_shape in name["face_shape"]:
+    	scores["name"] +=1
+    
+    
+    if eye_shape in name["eye_shape"]:
+    	scores["name"] +=1
+    if lip_volume in name["lip_volume"]:
+    	scores["name"] +=1
+    if eyebrow_shape in name["eyebrow_shape"]:
+    	scores["name"] +=1
+    if nose_type in name["nose_type"]:
+    	scores["name"] +=1
+    if face_shape in name["face_shape"]:
+    	scores["name"] +=1
+    
+    
+    if eye_shape in name["eye_shape"]:
+    	scores["name"] +=1
+    if lip_volume in name["lip_volume"]:
+    	scores["name"] +=1
+    if eyebrow_shape in name["eyebrow_shape"]:
+    	scores["name"] +=1
+    if nose_type in name["nose_type"]:
+    	scores["name"] +=1
+    if face_shape in name["face_shape"]:
+    	scores["name"] +=1
+    
+    
+    if eye_shape in name["eye_shape"]:
+    	scores["name"] +=1
+    if lip_volume in name["lip_volume"]:
+    	scores["name"] +=1
+    if eyebrow_shape in name["eyebrow_shape"]:
+    	scores["name"] +=1
+    if nose_type in name["nose_type"]:
+    	scores["name"] +=1
+    if face_shape in name["face_shape"]:
+    	scores["name"] +=1
+    
+    
+    result = max(scores, key=scores.get)
+    
     return render_template(
 	'page1.html',
 	response1 = f"Eye shape: {eye_shape}",
